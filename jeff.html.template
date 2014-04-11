@@ -1,0 +1,132 @@
+
+<html>
+<head>
+<title>pgwebclient</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="/resources/screen.css" />
+
+<head>
+	<title>registrationPage.jsp</title>
+</head>
+
+<body>
+    <div id="container">
+        <div align="right">
+            <img src="/resources/logo.png" />
+        </div>
+        <div id="content">
+
+    <h1>Openshift postgres Sample App</h1>
+
+<p>{{.Count}} items are made of {{.Material}}</p>
+
+	<p>A simple web application, running on JBossEWS 2.0 that demonstrates the ppostgres client cartridge</p>
+
+    <form id="reg" action="/query" method="POST">
+
+		<h3>Select a Server to Query</h3>
+
+		<table style="simpletablestyle">
+
+			<tr>
+
+				<td>
+
+				<select name="serverchoice">
+  					<option  value="master">Master</option>
+  					<option  value="standby">Standby</option>
+  					<option selected value="loadbalanced">Load Balanced</option>
+				</select>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<h3>Query</h3>
+
+		<table style="simpletablestyle">
+
+            <tr width="100%">
+
+                <td><font size="3" face="arial">
+
+				<textarea rows="4" cols="50" id="query" name="query">select * from testtable</textarea></font></td>
+
+            </tr>
+
+		</table>
+
+		<input id="register" type="submit" value="Execute Query" /> 
+
+        <p>
+            <label style="color: green;width: 100%;text-align: left;"></label> 
+        </p>
+
+        <p>
+			<label style="color: red; width: 100%;text-align: left;"></label>
+		</p>
+
+    </form>
+
+
+
+<h4>Query Results</h4>
+
+<table class="simpletablestyle">
+
+<thead>
+
+<tr>
+
+
+
+		<th>id</td>
+
+
+
+</tr>
+
+</thead>
+
+<tbody>
+
+
+
+	<tr>
+
+	
+
+		<td>111</td>
+
+	
+
+	</tr>
+
+
+
+	<tr>
+
+	
+
+		<td>222</td>
+
+	
+
+	</tr>
+
+
+
+</tbody>
+
+</table>	
+
+
+
+</body>
+
+</html>
+
+
